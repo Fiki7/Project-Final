@@ -82,7 +82,7 @@ class ProductSearchDelegate extends CustomSearchDelegate<Product> {
                           (index) {
                             return ItemCard(
                                 image: state.products[index].image,
-                                price: "From ${state.products[index].price}",
+                                price: "Rp ${state.products[index].price}",
                                 title: state.products[index].title,
                                 evenItem: (index % 2 == 0) ? true : false,
                                 onTap: () => Navigator.pushNamed(

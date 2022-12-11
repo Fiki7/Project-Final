@@ -31,7 +31,7 @@ const drawerItemTextStyle = TextStyle(
 );
 const productTitleStyle = TextStyle(
   color: Colors.black,
-  fontSize: 22,
+  fontSize: 15,
   fontFamily: "Raleway",
   fontWeight: FontWeight.w600,
 );
