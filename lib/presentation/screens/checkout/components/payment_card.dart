@@ -10,12 +10,13 @@ class PaymentCard extends StatefulWidget {
 }
 
 class _PaymentCardState extends State<PaymentCard> {
-   PaymentMethod _paymentMethod = PaymentMethod.visa;
+  PaymentMethod _paymentMethod = PaymentMethod.visa;
 
   @override
   void initState() {
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,7 +24,7 @@ class _PaymentCardState extends State<PaymentCard> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
-          "Payment Method",
+          "Metode Pembayaran",
           style: TextStyle(
             color: Colors.black,
             fontSize: 17,
@@ -33,23 +34,34 @@ class _PaymentCardState extends State<PaymentCard> {
         ),
         Container(
           margin: const EdgeInsets.only(top: 10),
-          decoration:  BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(25)
-          ),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(25)),
           child: Padding(
-            padding: const EdgeInsets.only(left: 10,right: 30),
+            padding: const EdgeInsets.only(left: 10, right: 30),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 25,),
-                const SizedBox(width: 10,),
-                buildRadioButton(PaymentMethod.visa,"assets/images/visa.png","**** **** **** 1234"),
-                const SizedBox(height: 25,),
-                buildRadioButton(PaymentMethod.master,"assets/images/master.png","**** **** **** 1234"),
-                const SizedBox(height: 25,),
-                buildRadioButton(PaymentMethod.bank,"assets/images/bank.png","**** **** **** 1234"),
-                const SizedBox(height: 25,),
+                const SizedBox(
+                  height: 25,
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                buildRadioButton(PaymentMethod.visa, "assets/images/visa.png",
+                    "**** **** **** 1234"),
+                const SizedBox(
+                  height: 25,
+                ),
+                buildRadioButton(PaymentMethod.master,
+                    "assets/images/master.png", "**** **** **** 1234"),
+                const SizedBox(
+                  height: 25,
+                ),
+                buildRadioButton(PaymentMethod.bank, "assets/images/bank.png",
+                    "**** **** **** 1234"),
+                const SizedBox(
+                  height: 25,
+                ),
               ],
             ),
           ),
@@ -57,31 +69,30 @@ class _PaymentCardState extends State<PaymentCard> {
       ],
     );
   }
-  Widget buildRadioButton(PaymentMethod value, String imagePath, String text){
-    return Row(
-        children: [
-          Radio(
-            activeColor: primaryColor,
-            groupValue: _paymentMethod,
-            onChanged: (PaymentMethod? value){
-              setState(() {
-                _paymentMethod = value!;
-              });
-            },
-            value: value,
-          ),
-          Image.asset(
-            imagePath,
-          ),
-          const SizedBox(width: 10,),
-          Text(
-            text,
-            style: const TextStyle(
-                color: Colors.black,
-                fontSize: 15,
-                fontWeight: FontWeight.normal
-            ),
-          ),
-        ]);
+
+  Widget buildRadioButton(PaymentMethod value, String imagePath, String text) {
+    return Row(children: [
+      Radio(
+        activeColor: primaryColor,
+        groupValue: _paymentMethod,
+        onChanged: (PaymentMethod? value) {
+          setState(() {
+            _paymentMethod = value!;
+          });
+        },
+        value: value,
+      ),
+      Image.asset(
+        imagePath,
+      ),
+      const SizedBox(
+        width: 10,
+      ),
+      Text(
+        text,
+        style: const TextStyle(
+            color: Colors.black, fontSize: 15, fontWeight: FontWeight.normal),
+      ),
+    ]);
   }
 }

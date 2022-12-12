@@ -13,7 +13,7 @@ class ShippingCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Text(
-              "Shipping information",
+              "Informasi Pribadi",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 17,
