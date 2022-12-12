@@ -23,7 +23,7 @@ class ShippingCard extends StatelessWidget {
             TextButton(
                 onPressed: () {},
                 child: const Text(
-                  "change",
+                  "Edit",
                   style: TextStyle(
                     color: Color(0xff5956e9),
                     fontSize: 15,
