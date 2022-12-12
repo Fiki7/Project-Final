@@ -43,7 +43,7 @@ class CheckoutBody extends StatelessWidget {
                             fontFamily: "Serif"),
                       ),
                       Text(
-                        "\$254000",
+                        "\Rp254000",
                         style: TextStyle(
                           color: Color(0xff5956e9),
                           fontSize: 22,

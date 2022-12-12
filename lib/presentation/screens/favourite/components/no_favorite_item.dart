@@ -15,7 +15,7 @@ class NoFavorite extends StatelessWidget {
           ),
         ),
         const Text(
-          "No favorites yet",
+          "Tidak ada produk yang ditambahkan",
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.black,
@@ -24,7 +24,9 @@ class NoFavorite extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        const SizedBox(height: 10,),
+        const SizedBox(
+          height: 10,
+        ),
         const Opacity(
           opacity: 0.57,
           child: Padding(
@@ -42,10 +44,10 @@ class NoFavorite extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 15),
           child: DefaultButton(
-            onPressed: (){},
+            onPressed: () {},
             backgroundColor: const Color(0xff57bfe9),
             forgroundColor: Colors.white,
-            text: "Start ordering",
+            text: "Mulai Belanja",
             width: 250,
             height: 60,
           ),

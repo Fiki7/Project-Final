@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:store/presentation/screens/home/home_screen.dart';
 import 'package:store/presentation/widgets/default_button.dart';
@@ -13,23 +12,24 @@ class NoItemsFound extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("No items found",
+            const Text(
+              "Tidak ada produk yang ditambahkan",
               style: TextStyle(
                 fontSize: 20,
-
               ),
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             DefaultButton(
-              onPressed: () => Navigator.pushNamedAndRemoveUntil(context, HomeScreen.routeName, (route) => false),
+              onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                  context, HomeScreen.routeName, (route) => false),
               backgroundColor: const Color(0xff57bfe9),
               forgroundColor: Colors.white,
-              text: "Start shopping",
+              text: "Mulai Belanja",
               // width: 250,
             )
           ],
-
-        )
-    );
+        ));
   }
 }
