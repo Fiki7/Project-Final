@@ -15,7 +15,7 @@ class ItemNotFound extends StatelessWidget {
             ),
           ),
           const Text(
-            "Item not found",
+            "Produk Tidak Ditemukan",
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.black,
@@ -24,13 +24,15 @@ class ItemNotFound extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          const SizedBox(height: 20,),
+          const SizedBox(
+            height: 20,
+          ),
           const Opacity(
             opacity: 0.57,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 40),
               child: Text(
-                "Try a more generic search term or try looking for alternative products.",
+                "Silahkan masukan kata kunci yang lain.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black,
